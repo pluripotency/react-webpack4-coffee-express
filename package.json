@@ -3,9 +3,12 @@
   "version": "0.0.1",
   "description": "",
   "scripts": {
-    "devel": "npm run coffee | npm run server",
+    "devel": "npm run coffee | npm run devserver",
     "coffee": "coffee -cwb -o js coffee_src",
-    "server": "node js/server/index.js"
+    "devserver": "node js/devserver/index.js",
+    "build": "coffee -c -o js coffee_src && webpack --config js/server/webpack.config.js",
+    "server": "node js/server/index.js",
+    "production": "npm run build && npm run server"
   },
   "keywords": [
     "react",
