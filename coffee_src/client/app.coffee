@@ -5,7 +5,11 @@ export default class App extends React.Component
   constructor: (props)->
     super arguments...
   render: ()=>
-    h 'div', [
-      h 'h1', 'Hello Coffee World'
-      h 'p', 'FooBar'
+    h '.card', [
+      h '.card-body.card-primary', [
+        [
+          h 'h1', 'Hello Coffee World'
+          h 'p', 'FooBar'
+        ]
+      ]
     ]

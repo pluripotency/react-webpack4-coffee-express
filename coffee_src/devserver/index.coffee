@@ -1,6 +1,7 @@
 express = require 'express'
 app = express()
 
+path = require 'path'
 config = require './config'
 
 webpack = require('webpack')
@@ -16,5 +17,7 @@ app.use webpackDevMiddleware compiler,
 #  noInfo: true,
   publicPath: webpackConfig.output.publicPath
 app.use webpackHotMiddleware compiler
+
+app.use express.static path.resolve __dirname, '../../public'
 
 app.listen config.port, ()-> console.log "devserver listening on port #{config.port}"
