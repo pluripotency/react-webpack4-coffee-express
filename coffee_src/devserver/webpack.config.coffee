@@ -17,7 +17,7 @@ module.exports =
       new CleanWebpackPlugin(['dist'])
       new HtmlWebpackPlugin
         title: config.html_title
-      # new webpack.NamedModulesPlugin(),
+      new webpack.NamedModulesPlugin(),
       new webpack.HotModuleReplacementPlugin()
       new webpack.NoEmitOnErrorsPlugin()
     ]

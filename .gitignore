@@ -4,5 +4,6 @@ npm-debug.log
 package-lock.json
 yarn.lock
 dist
+public/dist
 .cache
 js
